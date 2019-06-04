@@ -41,6 +41,9 @@ const siteContent = {
 
 let navBar = document.querySelectorAll('a');
 let logo = document.getElementById("logo-img");
+let mainHeader = document.querySelector('h1');
+let  button = document.querySelector('button');
+let headerImg = document.getElementById('cta-img')
 
 //navBar
 navBar[0].textContent = siteContent['nav'][`nav-item-1`]
@@ -50,4 +53,14 @@ navBar[3].textContent = siteContent['nav'][`nav-item-4`]
 navBar[4].textContent = siteContent['nav'][`nav-item-5`]
 navBar[5].textContent = siteContent['nav'][`nav-item-6`]
 
+// logo
+logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// mainHeader
+mainHeader.textContent = siteContent['cta']['h1']
+
+// button
+button.textContent = siteContent['cta']['button']
+
+//img DOM IS AWESOME
+headerImg.setAttribute('src', siteContent['cta']['img-src'])
