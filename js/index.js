@@ -85,3 +85,15 @@ paragraph[4].textContent = siteContent['main-content']['vision-content']
 
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
+// contact
+heading4[5].textContent = siteContent['contact']['contact-h4']
+paragraph[5].textContent = siteContent['contact']['address']
+paragraph[6].textContent = siteContent['contact']['phone']
+paragraph[7].textContent = siteContent['contact']['email']
+
+// footer
+paragraph[8].textContent = siteContent['footer']['copyright']
+
+
+
+
