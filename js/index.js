@@ -47,6 +47,7 @@ let headerImg = document.getElementById('cta-img');
 let heading4 = document.querySelectorAll('h4');
 let paragraph = document.querySelectorAll('p');
 let middleImg = document.getElementById('middle-img')
+let nav = document.querySelector('nav')
 
 
 
@@ -54,6 +55,7 @@ let middleImg = document.getElementById('middle-img')
 let count = 1;
 navBar.map(item => {
   item.textContent = siteContent['nav'][`nav-item-${count}`]
+  item.style.color = 'green';
   count++;
 })
 
@@ -63,6 +65,7 @@ navBar.map(item => {
 // navBar[3].textContent = siteContent['nav'][`nav-item-4`]
 // navBar[4].textContent = siteContent['nav'][`nav-item-5`]
 // navBar[5].textContent = siteContent['nav'][`nav-item-6`]
+
 
 // logo
 logo.src = siteContent['nav']['img-src']
@@ -103,6 +106,19 @@ paragraph[7].textContent = siteContent['contact']['email']
 // footer
 paragraph[8].textContent = siteContent['footer']['copyright']
 
+// prepend()
+let newAnchorHome = document.createElement('a')
+newAnchorHome.textContent = 'Home'
+newAnchorHome.href = '#';
+newAnchorHome.style.color = 'green'
+nav.prepend(newAnchorHome)
+console.log(newAnchorHome)
 
-
+// appendChild()
+let newAnchorTestimonials = document.createElement('a')
+newAnchorTestimonials.href = '#';
+newAnchorTestimonials.textContent = 'Testimonials';
+newAnchorTestimonials.style.color = 'green';
+nav.appendChild(newAnchorTestimonials);
+console.log(newAnchorTestimonials);
 
