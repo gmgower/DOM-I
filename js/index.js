@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let navBar = document.querySelectorAll('a');
+let navBar = Array.from(document.querySelectorAll('a'));
 let logo = document.getElementById("logo-img");
 let mainHeader = document.querySelector('h1');
 let button = document.querySelector('button');
@@ -51,15 +51,22 @@ let middleImg = document.getElementById('middle-img')
 
 
 //navBar
-navBar[0].textContent = siteContent['nav'][`nav-item-1`]
-navBar[1].textContent = siteContent['nav'][`nav-item-2`]
-navBar[2].textContent = siteContent['nav'][`nav-item-3`]
-navBar[3].textContent = siteContent['nav'][`nav-item-4`]
-navBar[4].textContent = siteContent['nav'][`nav-item-5`]
-navBar[5].textContent = siteContent['nav'][`nav-item-6`]
+let count = 1;
+navBar.map(item => {
+  item.textContent = siteContent['nav'][`nav-item-${count}`]
+  count++;
+})
+
+// navBar[0].textContent = siteContent['nav'][`nav-item-1`]
+// navBar[1].textContent = siteContent['nav'][`nav-item-2`]
+// navBar[2].textContent = siteContent['nav'][`nav-item-3`]
+// navBar[3].textContent = siteContent['nav'][`nav-item-4`]
+// navBar[4].textContent = siteContent['nav'][`nav-item-5`]
+// navBar[5].textContent = siteContent['nav'][`nav-item-6`]
 
 // logo
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent['nav']['img-src']
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // mainHeader
 mainHeader.textContent = siteContent['cta']['h1']
@@ -68,7 +75,8 @@ mainHeader.textContent = siteContent['cta']['h1']
 button.textContent = siteContent['cta']['button']
 
 //img DOM IS AWESOME
-headerImg.setAttribute('src', siteContent['cta']['img-src'])
+headerImg.src = siteContent['cta']['img-src']
+// headerImg.setAttribute('src', siteContent['cta']['img-src'])
 
 // main-content
 heading4[0].textContent = siteContent['main-content']['features-h4']
@@ -83,7 +91,8 @@ paragraph[2].textContent = siteContent['main-content']['services-content']
 paragraph[3].textContent = siteContent['main-content']['product-content']
 paragraph[4].textContent = siteContent['main-content']['vision-content']
 
-middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+middleImg.src = siteContent['main-content']['middle-img-src']
+// middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 // contact
 heading4[5].textContent = siteContent['contact']['contact-h4']
