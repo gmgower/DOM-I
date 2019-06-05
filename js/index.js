@@ -42,8 +42,13 @@ const siteContent = {
 let navBar = document.querySelectorAll('a');
 let logo = document.getElementById("logo-img");
 let mainHeader = document.querySelector('h1');
-let  button = document.querySelector('button');
-let headerImg = document.getElementById('cta-img')
+let button = document.querySelector('button');
+let headerImg = document.getElementById('cta-img');
+let heading4 = document.querySelectorAll('h4');
+let paragraph = document.querySelectorAll('p');
+let middleImg = document.getElementById('middle-img')
+
+
 
 //navBar
 navBar[0].textContent = siteContent['nav'][`nav-item-1`]
@@ -64,3 +69,19 @@ button.textContent = siteContent['cta']['button']
 
 //img DOM IS AWESOME
 headerImg.setAttribute('src', siteContent['cta']['img-src'])
+
+// main-content
+heading4[0].textContent = siteContent['main-content']['features-h4']
+heading4[1].textContent = siteContent['main-content']['about-h4']
+heading4[2].textContent = siteContent['main-content']['services-h4']
+heading4[3].textContent = siteContent['main-content']['product-h4']
+heading4[4].textContent = siteContent['main-content']['vision-h4']
+
+paragraph[0].textContent = siteContent['main-content']['features-content']
+paragraph[1].textContent = siteContent['main-content']['about-content']
+paragraph[2].textContent = siteContent['main-content']['services-content']
+paragraph[3].textContent = siteContent['main-content']['product-content']
+paragraph[4].textContent = siteContent['main-content']['vision-content']
+
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
