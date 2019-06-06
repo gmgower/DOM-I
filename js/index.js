@@ -59,6 +59,7 @@ navBar.map(item => {
   count++;
 })
 
+console.log(navBar)
 // navBar[0].textContent = siteContent['nav'][`nav-item-1`]
 // navBar[1].textContent = siteContent['nav'][`nav-item-2`]
 // navBar[2].textContent = siteContent['nav'][`nav-item-3`]
@@ -122,3 +123,16 @@ newAnchorTestimonials.style.color = 'green';
 nav.appendChild(newAnchorTestimonials);
 console.log(newAnchorTestimonials);
 
+//Stretch Goals?
+const pOdd = document.querySelectorAll('.top-content h4');
+pOdd.forEach(p => {
+  p.style.background = '#ccc'
+})
+console.log(pOdd)
+
+
+document.querySelector('button').addEventListener('click', onClick);
+function onClick(e) {
+ console.log('Clicked')
+  e.target.innerText= 'Hello'
+}
